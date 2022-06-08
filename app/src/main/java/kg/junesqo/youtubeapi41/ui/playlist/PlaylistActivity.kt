@@ -21,11 +21,11 @@ class PlaylistActivity : BaseActivity<ActivityPlaylistBinding, PlaylistViewModel
     }
 
     override fun initView() {
-        TODO("Not yet implemented")
+
     }
 
     override fun initListener() {
-        TODO("Not yet implemented")
+
     }
 
     override fun initViewModel() {
@@ -35,7 +35,7 @@ class PlaylistActivity : BaseActivity<ActivityPlaylistBinding, PlaylistViewModel
     }
 
     override fun checkInternet() {
-        TODO("Not yet implemented")
+
     }
 
 }
