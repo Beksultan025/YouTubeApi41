@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.playlist.PlaylistActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/item_playlist"
-        android:id="@+id/recycler_main"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".ui.playlist_detail.PlaylistDetailActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
