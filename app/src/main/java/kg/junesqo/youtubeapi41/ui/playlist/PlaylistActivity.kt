@@ -43,20 +43,14 @@ class PlaylistActivity : BaseActivity<ActivityPlaylistBinding, PlaylistViewModel
     }
 
     private fun initRecyclerView(playlistsList: List<Item>) {
-        binding.recyclerMain.adapter = PlaylistAdapter(playlistsList, this::onItemClick
-//            override fun onItemClick(id: String) {
-//                Intent(this@PlaylistActivity, PlaylistDetailActivity::class.java)
-//                intent.putExtra("Username","John Doe")
-//                startActivity(intent)
-//            }
-
-        )
+        binding.recyclerMain.adapter = PlaylistAdapter(playlistsList, this::onItemClick)
     }
+
     private fun onItemClick(channelId: String){
         val intent = Intent(this, PlaylistDetailActivity::class.java)
                 intent.putExtra(KEY,channelId)
                 startActivity(intent)
-//        Log.e("ID", channelId)
+
     }
 
 

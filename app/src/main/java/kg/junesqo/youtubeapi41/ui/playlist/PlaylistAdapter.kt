@@ -38,8 +38,5 @@ class PlaylistAdapter(private val list:List<Item>, private val onItemClick: (ite
         }
     }
 
-//    interface OnItemClickListener{
-//        fun onItemClick(id : String)
-//    }
 }
 

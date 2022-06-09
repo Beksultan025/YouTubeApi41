@@ -34,6 +34,7 @@
 
         <TextView
             android:id="@+id/playlist_tv"
+            android:fontFamily="@font/noto_sans"
             android:textColor="@color/white"
             android:layout_marginBottom="10dp"
             android:layout_gravity="bottom|center"
@@ -48,7 +49,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/cardView"
@@ -62,11 +63,14 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:paddingStart="12dp"
                 android:id="@+id/playlistName_tv"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:lines="2"
                 android:maxLines="1"
+                android:fontFamily="@font/fjalla"
                 android:text="@string/title_example"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -76,14 +80,25 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/playlistCount_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/playlist_extra_info_example"
-            android:textColor="@color/black" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/playlistCount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:paddingStart="8dp"
+                android:text="@string/playlist_extra_info_example"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
