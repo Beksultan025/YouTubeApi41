@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import kg.junesqo.youtubeapi41.databinding.ItemPlaylistBinding
 import kg.junesqo.youtubeapi41.model.Item
 
-class PlaylistAdapter(private val list:List<Item>, private val listener:OnItemClickListener): RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
+class PlaylistAdapter(private val list:List<Item>, private val onItemClick: (itemsId: String) -> Unit?): RecyclerView.Adapter<PlaylistAdapter.ViewHolder>() {
 
     lateinit var binding: ItemPlaylistBinding
 
@@ -31,15 +31,15 @@ class PlaylistAdapter(private val list:List<Item>, private val listener:OnItemCl
                 .load(items.snippet.thumbnails.default.url)
                 .into(binding.imageEv)
             binding.playlistNameTv.text = items.snippet.title
-            binding.playlistCountTv.text = items.contentDetails.itemCount.toString() + "video series"
+            binding.playlistCountTv.text = items.contentDetails.itemCount.toString() + " video series"
             itemView.setOnClickListener{
-                listener.onItemClick(items.id)
+                onItemClick(items.id)
             }
         }
     }
 
-    interface OnItemClickListener{
-        fun onItemClick(id : String)
-    }
+//    interface OnItemClickListener{
+//        fun onItemClick(id : String)
+//    }
 }
 
